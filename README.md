@@ -14,12 +14,24 @@ A Python-based integration for Monday.com that duplicates items from a Master bo
 ## Project Structure
 
 ```
-Monday SS26/
-├── monday_api_client.py          # Core Monday.com API client
-├── duplicate_master_to_proddev.py # Main duplication script
-├── test_single_subitem.py        # Test script for API functionality
-├── setup_monday_api.py           # Setup and configuration script
-├── monday_config.json            # Configuration file for subitems and lead times
+mondaySeasons/
+├── src/                          # Main source code
+│   ├── monday_api_client.py      # Core Monday.com API client
+│   ├── duplicate_master_to_proddev.py  # Main duplication script
+│   └── test_single_subitem.py    # Test script for API functionality
+├── scripts/                      # Utility scripts
+│   ├── setup_monday_api.py       # Setup and configuration script
+│   ├── generate_product_dev.py   # CSV generation utilities
+│   ├── generate_monday_boards.py # Board generation utilities
+│   └── monday_subitem_manager.py # Subitem management utilities
+├── config/                       # Configuration files
+│   └── monday_config.json        # Configuration for subitems and lead times
+├── data/                         # CSV data files
+│   ├── SS26_Master_1759354670.csv
+│   ├── SS26_ProdDev.csv
+│   └── product_development_board*.csv
+├── docs/                         # Documentation
+│   └── README_Monday_API.md      # Detailed API documentation
 ├── requirements.txt              # Python dependencies
 └── README.md                     # This file
 ```
@@ -51,7 +63,7 @@ API_TOKEN = "your_monday_api_token_here"
 ### 4. Run Setup (Optional)
 
 ```bash
-python setup_monday_api.py
+python scripts/setup_monday_api.py
 ```
 
 ## Usage
@@ -59,7 +71,7 @@ python setup_monday_api.py
 ### Duplicate Master Board to Prod Dev
 
 ```bash
-python duplicate_master_to_proddev.py
+python src/duplicate_master_to_proddev.py
 ```
 
 This script will:
@@ -72,12 +84,12 @@ This script will:
 ### Test API Connection
 
 ```bash
-python test_single_subitem.py
+python src/test_single_subitem.py
 ```
 
 ## Configuration
 
-The `monday_config.json` file contains:
+The `config/monday_config.json` file contains:
 
 - **Department configurations** with subitem definitions
 - **Lead times** for due date calculations

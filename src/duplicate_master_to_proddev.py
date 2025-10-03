@@ -246,7 +246,7 @@ class MondayBoardDuplicator:
         
         # Load configuration
         try:
-            with open('monday_config.json', 'r', encoding='utf-8') as f:
+            with open('config/monday_config.json', 'r', encoding='utf-8') as f:
                 config = json.load(f)
         except FileNotFoundError:
             print("❌ monday_config.json not found")

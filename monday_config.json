@@ -1,0 +1,120 @@
+{
+  "departments": {
+    "Product Development": {
+      "board_name": "Product Development Board",
+      "sub_items": [
+        {
+          "task_name": "Fabric Approved",
+          "lead_time_weeks": 40,
+          "description": "Fabric selection and approval process"
+        },
+        {
+          "task_name": "Design Approved", 
+          "lead_time_weeks": 26,
+          "description": "Design review and approval"
+        },
+        {
+          "task_name": "Fit Approved",
+          "lead_time_weeks": 18,
+          "description": "Fit testing and approval"
+        },
+        {
+          "task_name": "Color Approved",
+          "lead_time_weeks": 20,
+          "description": "Color selection and approval"
+        },
+        {
+          "task_name": "Production Approved",
+          "lead_time_weeks": 16,
+          "description": "Production readiness approval"
+        }
+      ]
+    },
+    "Supply Chain": {
+      "board_name": "Supply Chain Board",
+      "sub_items": [
+        {
+          "task_name": "Demand Planned",
+          "lead_time_weeks": 52,
+          "description": "Demand forecasting and planning"
+        },
+        {
+          "task_name": "Fabric PO Issued",
+          "lead_time_weeks": 32,
+          "description": "Fabric purchase order issued"
+        },
+        {
+          "task_name": "Trim PO Issued",
+          "lead_time_weeks": 20,
+          "description": "Trim purchase order issued"
+        },
+        {
+          "task_name": "Production Scheduled",
+          "lead_time_weeks": 16,
+          "description": "Production scheduling and coordination"
+        },
+        {
+          "task_name": "Inventory Received",
+          "lead_time_weeks": 4,
+          "description": "Final inventory receipt and verification"
+        }
+      ]
+    },
+    "Marketing": {
+      "board_name": "Marketing Board",
+      "sub_items": [
+        {
+          "task_name": "Creative Brief",
+          "lead_time_weeks": 20,
+          "description": "Creative brief development and approval"
+        },
+        {
+          "task_name": "Assets Complete",
+          "lead_time_weeks": 12,
+          "description": "Marketing assets creation and completion"
+        },
+        {
+          "task_name": "Other",
+          "lead_time_weeks": 6,
+          "description": "Additional marketing tasks"
+        }
+      ]
+    },
+    "Finance": {
+      "board_name": "Finance Board",
+      "sub_items": [
+        {
+          "task_name": "MSRP and COGS Estimate",
+          "lead_time_weeks": 26,
+          "description": "Manufacturer's Suggested Retail Price determination"
+        },
+        {
+          "task_name": "MSRP and COGS Complete",
+          "lead_time_weeks": 16,
+          "description": "Cost of Goods Sold calculation and approval"
+        },
+        {
+          "task_name": "Other",
+          "lead_time_weeks": 4,
+          "description": "Additional financial tasks"
+        }
+      ]
+    }
+  },
+  "settings": {
+    "date_format": "YYYY-MM-DD",
+    "launch_date_column": "Launch Date",
+    "item_name_column": "Item",
+    "style_name_column": "Style Name",
+    "color_name_column": "Color Name",
+    "priority_column": "Priority",
+    "status_column": "Exec Status",
+    "platform_column": "Platform"
+  },
+  "output_settings": {
+    "include_headers": true,
+    "date_calculation_method": "launch_date_minus_weeks",
+    "sub_item_prefix": "  ",
+    "csv_encoding": "utf-8"
+  }
+}
